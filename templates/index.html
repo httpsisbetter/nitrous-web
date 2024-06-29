@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NITROUS-OXIDE</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Nitrous™</h1>
+            <p>open source OSINT tool with an exposed RESTful API</p>
+            <button id="theme-toggle" onclick="toggleTheme()">Toggle Dark Mode</button>
+        </header>
+        <main>
+            <form id="lookup-form" onsubmit="performLookup(); return false;">
+                <input type="email" id="email" placeholder="Enter email address" required>
+                <button type="submit">Lookup</button>
+            </form>
+            <div id="results"></div>
+        </main>
+        <footer>
+            <p>&copy; Haruhime Holdings 2024 </p>
+        </footer>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
